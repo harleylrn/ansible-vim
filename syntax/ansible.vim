@@ -49,6 +49,15 @@ highlight link yamlFlowStringDelimiter Delimiter
 " making conditional
 highlight link yamlConstant NONE
 
+" Michael Orlov change
+syn match ansNameLine "- name: .*" contains=ansNameText
+hi def link ansNameLine Label
+syn match   ansNameText ": .*" contained
+hi def link ansNameText Label
+hi ansNameKey  ctermfg=255 cterm=bold,underline gui=bold,underline
+hi ansNameLine ctermfg=255 cterm=bold,underline gui=bold,underline
+hi ansNameText ctermfg=255 cterm=italic,underline gui=italic,underline
+" Till here
 fun! s:attribute_highlight(attributes)
   if a:attributes =~ 'a'
     syn match ansible_attributes "\v\w+\=" containedin=yamlPlainScalar
@@ -124,3 +133,5 @@ else
 endif
 
 let b:current_syntax = "ansible"
+" Mine change
+syn region ansFold start="#\?- name:" end="\n\n" transparent fold
