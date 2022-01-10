@@ -1,3 +1,6 @@
+
+This is a copy of the https://github.com/pearofducks/ansible-vim.git with some additions.
+
 ## introduction
 
 This is a vim syntax plugin for Ansible 2.x, it supports YAML playbooks, Jinja2 templates, and Ansible's `hosts` files.
