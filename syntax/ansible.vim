@@ -50,13 +50,13 @@ highlight link yamlFlowStringDelimiter Delimiter
 highlight link yamlConstant NONE
 
 " Michael Orlov change
-syn match ansNameLine "- name: .*" contains=ansNameText
-hi def link ansNameLine Label
-syn match   ansNameText ": .*" contained
-hi def link ansNameText Label
-hi ansNameKey  ctermfg=255 cterm=bold,underline gui=bold,underline
-hi ansNameLine ctermfg=255 cterm=bold,underline gui=bold,underline
-hi ansNameText ctermfg=255 cterm=italic,underline gui=italic,underline
+" syn match ansNameLine "- name: .*" contains=ansNameText
+" hi def link ansNameLine Label
+" syn match   ansNameText ": .*" contained
+" hi def link ansNameText Label
+" hi ansNameKey  ctermfg=255 cterm=bold gui=bold,underline
+" hi ansNameLine ctermfg=255 cterm=bold gui=bold,underline
+" hi ansNameText ctermfg=255 cterm=italic gui=italic,underline
 " Till here
 fun! s:attribute_highlight(attributes)
   if a:attributes =~ 'a'
