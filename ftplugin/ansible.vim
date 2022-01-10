@@ -12,12 +12,14 @@ set foldtext=FoldTaskBlock()
 fun! FoldTaskBlock()
   let line = getline(v:foldstart)
   "let sub  = substitute(line, '/\*\|\*/\|{{{\d\=', '', 'g')
-  let sub  = substitute(line, '- name: ', '▶ ', 'g')
+  let sub  = substitute(line, '- name: ', '   ', 'g')
   "return v:folddashes . sub
   return sub . ' '
 endfun
 
 set fillchars=fold:·
+" set fillchars=:fold:
+
 
 " Gets typed so often
 iab n: - name:
