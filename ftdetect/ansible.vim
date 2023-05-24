@@ -10,6 +10,7 @@ function! s:isAnsible()
     let s:ftdetect_filename_regex = g:ansible_ftdetect_filename_regex
   endif
 
+  if filename =~ '\.gitlab-ci\.ya?ml$' | return 0 | en
   if filename =~ s:ftdetect_filename_regex | return 1 | en
 
   let shebang = getline(1)
